@@ -1,0 +1,16 @@
+{
+  "window": {
+    "title": "My Terminal",
+    "theme": "green"
+  },
+  "commands": [
+    {
+      "prompt": "hello",
+      "response": "hi there!"
+    },
+    {
+      "prompt": "whoami",
+      "response": "you are a guest user"
+    }
+  ]
+}
