@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.3]
+### Addded
+- .github folder with templates.
+### Changed
+- Location of Code of Conduct file.
+### Removed
+
+## [2.0.2]
+### Addded
+- Code of Conduct.
+### Changed
+
+### Removed
+
+---
+
+## [2.0.1]
+### Addded
+- Roadmap.
+### Changed
+
+### Removed
+
+---
+
 ## [2.0.0] - 2025-06-30
 ### Added
 - New `Electron`-based window system (`renderWindow`) for UI-based terminal display.
