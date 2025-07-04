@@ -4,23 +4,23 @@ This document outlines the planned features and improvements for upcoming versio
 
 ---
 
-## 2.x Series
+## 0.2.x Series
 
-- **v2.1.0** – Terminal output in Electron window  
+- **v0.2.1** – Terminal output in Electron window  
   *Display terminal output directly in Electron-based windows for a richer GUI experience.*
 
-- **v2.2.0** – Terminal theming for console output  
+- **v0.2.2** – Terminal theming for console output  
   *Allow users to customize the look and feel of the CLI terminal via themes.*
 
-- **v2.3.0** – Terminal theming for Electron window  
+- **v0.2.3** – Terminal theming for Electron window  
   *Enable theming support for Electron-based terminal windows.*
 
-- **v2.x.x** – Patch releases  
+- **v0.0.x** – Patch releases  
   *Bugfixes, minor improvements, and documentation updates will be released as needed.*
 
 ---
 
-## 3.0.0 (Major Release)
+## 0.3.0 (Major Release)
 
 - **Web app console (like xterm.js)**  
   *Introduce a web-based terminal emulator for browser environments.*

@@ -7,14 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [2.0.3]
+## [0.3.0] - 2025-07-4
+### Added
+- UI parser that reads `terminal.json` and converts window configuration into HTML
+- `ui_cache` directory to store generated UI files
+- Theme-based styling support (e.g., green, blue)
+- HTML template output based on terminal configuration
+- New `build-ui` script for generating the UI
+
+### Changed
+- Refactored configuration handling for cleaner separation between logic and output
+
+### Removed
+
+---
+
+## [0.2.4] - 2025-07-3
+### Addded
+- Github actions.
+### Changed
+
+### Removed
+
+---
+
+## [0.2.3] - 2025-07-1
 ### Addded
 - .github folder with templates.
 ### Changed
 - Location of Code of Conduct file.
 ### Removed
 
-## [2.0.2]
+## [0.2.2]
 ### Addded
 - Code of Conduct.
 ### Changed
@@ -23,7 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [2.0.1]
+## [0.2.1] - 2025-07-1
 ### Addded
 - Roadmap.
 ### Changed
@@ -32,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [2.0.0] - 2025-06-30
+## [0.2.0] - 2025-06-30
 ### Added
 - New `Electron`-based window system (`renderWindow`) for UI-based terminal display.
 - `terminal.json` config loading for flexible prompt/theme configuration.
@@ -48,7 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0] - 2025-06-28
+## [0.1.0] - 2025-06-28
 ### Added
 - Initial terminal command system with prompt handler.
 - Support for basic command-response via `terminal.json`.

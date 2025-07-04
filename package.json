@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "trmbuild": "electron src/index.js"
+    "trmbuild": "electron src/index.js",
+    "trm:buildUI": "node src/components/parseUI.js"
   },
   "keywords": [],
   "author": "",
