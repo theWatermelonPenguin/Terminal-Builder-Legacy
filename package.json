@@ -2,11 +2,11 @@
   "name": "terminal-builder",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/window.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "trmbuild": "electron src/index.js",
-    "trm:buildUI": "node src/components/parseUI.js"
+    "trmbuild:console": "node src/console.js",
+    "trmbuild:window": "electron . src/window.js",
+    "trmbuild:ui": "node src/components/parseUI.js"
   },
   "keywords": [],
   "author": "",

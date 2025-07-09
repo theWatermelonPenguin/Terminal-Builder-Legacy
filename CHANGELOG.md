@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.4.0] - 2025-07-8
+### Added
+- `input` block in `terminal.json`
+    -`prefix`: Customize the terminal input prompt (e.g., >, $, ~).
+
+    - `placeholder`: Set placeholder text in the input field (for HTML/Electron).
+
+    - `unknownCommandMessage`: Define a custom response for unknown commands.
+
+### Changed
+- How themes load into the electron window
+- How the files are dispatched
+
+### Removed
+- 1 dispatcher for all terminal related content
+---
 
 ## [0.3.0] - 2025-07-4
 ### Added

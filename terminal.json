@@ -1,7 +1,12 @@
 {
-  "window": {
-    "title": " Terminalization V3.2.8",
-    "theme": "green"
+  "console": {
+    "title": "The system",
+    "theme": "blue"
+  },
+  "input": {
+    "prefix": "$",
+    "unknownCommandMessage": "Huh? Command not recognized!",
+    "placeholder": "Type your command here..."
   },
   "commands": [
     {
@@ -11,6 +16,10 @@
     {
       "prompt": "whoami",
       "response": "you are a guest user"
+    },
+    {
+      "prompt": "whereami",
+      "response": "you are here"
     }
   ]
 }

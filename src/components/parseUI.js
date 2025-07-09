@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Find config files and parse
+// Find config files and parse
 const configs = findTerminalConfigs(process.cwd());
 let parsedConfig = {};
 
@@ -11,6 +12,13 @@ if (configs.length > 0) {
   const fileContent = fs.readFileSync(configPath, 'utf-8');
   parsedConfig = JSON.parse(fileContent);
 }
+
+// ✅ Move this section *after* parsedConfig is loaded
+const inputConfig = parsedConfig.input || {};
+const prefix = inputConfig.prefix || '>';
+const unknownMessage = inputConfig.unknownCommandMessage || 'Command not found.';
+const placeholder = inputConfig.placeholder || '';
+
 
 // Theming and html generation
 const theme = parsedConfig.window?.theme || 'green';
@@ -21,22 +29,34 @@ const themeStyles = {
 const selectedTheme = themeStyles[theme] || themeStyles.green;
 
 const html = `
-  <html>
-    <head>
-      <style>
-        body {
-          background-color: ${selectedTheme.backgroundColor};
-          color: ${selectedTheme.color};
-          font-family: monospace, monospace;
-          margin: 0; padding: 20px;
+  <div style="background-color: ${selectedTheme.backgroundColor}; color: ${selectedTheme.color}; padding: 10px; font-family: monospace;">
+    <h1>${parsedConfig.window?.title || "Untitled Terminal"}</h1>
+    <div class="terminal-body" id="terminal-body">
+      <div>${prefix} Welcome to Terminal Builder!</div>
+    </div>
+    <div>
+      <span id="input-prefix">${prefix}</span>
+      <input type="text" id="terminal-input" placeholder="${placeholder}" autofocus />
+    </div>
+    <script>
+      const commands = ${JSON.stringify(parsedConfig.commands)};
+      const input = document.getElementById('terminal-input');
+      const body = document.getElementById('terminal-body');
+
+      input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+          const userInput = input.value;
+          const match = commands.find(c => c.prompt === userInput);
+          const response = match ? match.response : "${unknownMessage}";
+          const out = document.createElement('div');
+          out.innerHTML = '${prefix} ' + userInput + '<br>' + response;
+          body.appendChild(out);
+          input.value = '';
+          body.scrollTop = body.scrollHeight;
         }
-      </style>
-    </head>
-    <body>
-      <h1>${parsedConfig.window?.title || "Untitled Terminal"}</h1>
-      <div class="terminal-body">...</div>
-    </body>
-  </html>
+      });
+    </script>
+  </div>
 `;
 
 // Ensure ui_cache exists
