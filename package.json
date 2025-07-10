@@ -6,7 +6,7 @@
   "scripts": {
     "trmbuild:console": "node src/console.js",
     "trmbuild:window": "electron . src/window.js",
-    "trmbuild:ui": "node src/components/parseUI.js"
+    "trmbuild:ui": "node src/components/writeUI.js"
   },
   "keywords": [],
   "author": "",

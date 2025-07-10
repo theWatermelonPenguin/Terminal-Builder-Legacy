@@ -1,32 +1,8 @@
-import { findTerminalConfigs } from "../utils/findTerminalConfig.js"; 
+import {getParsedConfig, prefix, unknownMessage, placeholder, selectedTheme} from "./input.js"
 import fs from 'fs';
 import path from 'path';
 
-// Find config files and parse
-// Find config files and parse
-const configs = findTerminalConfigs(process.cwd());
-let parsedConfig = {};
-
-if (configs.length > 0) {
-  const configPath = configs[0];
-  const fileContent = fs.readFileSync(configPath, 'utf-8');
-  parsedConfig = JSON.parse(fileContent);
-}
-
-// ✅ Move this section *after* parsedConfig is loaded
-const inputConfig = parsedConfig.input || {};
-const prefix = inputConfig.prefix || '>';
-const unknownMessage = inputConfig.unknownCommandMessage || 'Command not found.';
-const placeholder = inputConfig.placeholder || '';
-
-
-// Theming and html generation
-const theme = parsedConfig.window?.theme || 'green';
-const themeStyles = {
-  green: { backgroundColor: "#000000", color: "#00FF00" },
-  blue: { backgroundColor: "#001F3F", color: "#7FDBFF" }
-};
-const selectedTheme = themeStyles[theme] || themeStyles.green;
+const parsedConfig = getParsedConfig();
 
 const html = `
   <div style="background-color: ${selectedTheme.backgroundColor}; color: ${selectedTheme.color}; padding: 10px; font-family: monospace;">
@@ -60,7 +36,7 @@ const html = `
 `;
 
 // Ensure ui_cache exists
-const uiCacheDir = path.join(process.cwd(), 'src', 'ui', 'cache');
+const uiCacheDir = path.join(process.cwd(), 'src', 'ui', 'screen');
 if (!fs.existsSync(uiCacheDir)) {
   fs.mkdirSync(uiCacheDir);
 }

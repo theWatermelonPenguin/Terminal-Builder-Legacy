@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [0.4.2] - 2025-07-10
+### Changed
+- Renamed `parseUI.js` to `writeUI.js` to better reflect its purpose
+
+### Added
+- New `input.js` parser to handle parsing of the input block in `terminal.json`
+
+### Removed
+- Parsing responsibilities from `parseUI.js` (now `writeUI.js`)
+
+---
+
 ## [0.4.1] - 2025-07-10
 ### Changed
 - Output location of `terminal_ui.html` file
