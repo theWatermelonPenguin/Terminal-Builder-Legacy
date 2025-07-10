@@ -1,4 +1,7 @@
-import {getParsedConfig, prefix, unknownMessage, placeholder, selectedTheme} from "./input.js"
+import { prefix, unknownMessage, placeholder} from "./input.js";
+import { selectedTheme } from "../ui/themes/themes.js";
+import { getParsedConfig } from "../utils/parseTerminalConfig.js";
+import { mode } from "../utils/findMode.js";
 import fs from 'fs';
 import path from 'path';
 
@@ -6,7 +9,7 @@ const parsedConfig = getParsedConfig();
 
 const html = `
   <div style="background-color: ${selectedTheme.backgroundColor}; color: ${selectedTheme.color}; padding: 10px; font-family: monospace;">
-    <h1>${parsedConfig.window?.title || "Untitled Terminal"}</h1>
+    <h1>${parsedConfig[mode]?.title || "Untitled Terminal"}</h1>
     <div class="terminal-body" id="terminal-body">
       <div>${prefix} Welcome to Terminal Builder!</div>
     </div>
@@ -35,14 +38,25 @@ const html = `
   </div>
 `;
 
-// Ensure ui_cache exists
-const uiCacheDir = path.join(process.cwd(), 'src', 'ui', 'screen');
-if (!fs.existsSync(uiCacheDir)) {
-  fs.mkdirSync(uiCacheDir);
+const DesktopDir = path.join(process.cwd(), 'src', 'ui', 'desktop');
+if (!fs.existsSync(DesktopDir)) {
+  fs.mkdirSync(DesktopDir);
 }
 
-// Write to terminal_ui.html
-const outputFile = path.join(uiCacheDir, 'terminal_ui.html');
-fs.writeFileSync(outputFile, html, 'utf-8');
+const WebDir = path.join(process.cwd(), 'src', 'ui', 'web');
+if (!fs.existsSync(WebDir)) {
+    fs.mkdirSync(WebDir);
+}
 
-console.log(`HTML written to ${outputFile}`);
+if (mode === 'web') {
+  // Write to terminal_ui.html for web mode
+  const outputFile = path.join(WebDir, 'terminal_ui.html');
+  fs.writeFileSync(outputFile, html, 'utf-8');
+  console.log(`HTML written to ${outputFile}`);
+} else {
+    const outputFile = path.join(DesktopDir, 'terminal_ui.html');
+    fs.writeFileSync(outputFile, html, 'utf-8');
+    console.log(`HTML written to ${outputFile}`);
+}
+// Write to terminal.html
+

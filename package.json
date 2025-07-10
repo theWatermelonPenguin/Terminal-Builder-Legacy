@@ -6,6 +6,7 @@
   "scripts": {
     "trmbuild:console": "node src/console.js",
     "trmbuild:window": "electron . src/window.js",
+    "trmbuild:web": "serve src/ui/web",
     "trmbuild:ui": "node src/components/writeUI.js"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "type": "module",
   "dependencies": {
     "chalk": "^5.4.1",
-    "electron": "^37.1.0"
+    "electron": "^37.1.0",
+    "serve": "^14.2.4"
   }
 }
