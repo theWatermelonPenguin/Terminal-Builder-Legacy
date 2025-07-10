@@ -17,7 +17,7 @@ export default function launchWindow() {
       }
     });
 
-    win.loadFile(path.join(__dirname, '../ui/cache/terminal_ui.html'));
+    win.loadFile(path.join(__dirname, '../ui/screen/terminal_ui.html'));
 
     // Optional: reopen window on macOS when dock icon clicked
     app.on('activate', () => {

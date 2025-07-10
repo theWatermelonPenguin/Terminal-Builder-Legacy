@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+
+## [0.4.1] - 2025-07-10
+### Changed
+- Output location of `terminal_ui.html` file
+- Minor adjustments to file paths for consistency
+
+---
+
 ## [0.4.0] - 2025-07-8
 ### Added
 - `input` block in `terminal.json`
@@ -34,16 +42,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Refactored configuration handling for cleaner separation between logic and output
 
-### Removed
-
 ---
 
 ## [0.2.4] - 2025-07-3
 ### Addded
 - Github actions.
-### Changed
-
-### Removed
 
 ---
 
@@ -52,9 +55,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .github folder with templates.
 ### Changed
 - Location of Code of Conduct file.
-### Removed
 
-## [0.2.2]
+---
+
+## [0.2.2] - 2024-07-1
 ### Addded
 - Code of Conduct.
 ### Changed
@@ -66,9 +70,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.2.1] - 2025-07-1
 ### Addded
 - Roadmap.
-### Changed
-
-### Removed
 
 ---
 

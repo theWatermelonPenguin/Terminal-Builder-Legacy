@@ -19,8 +19,8 @@ const fileContent = fs.readFileSync(configPath, 'utf-8');
 const terminalConfig = JSON.parse(fileContent);
 
 // 5. Output the terminal window title to console
-if (terminalConfig.window && terminalConfig.window.title) {
-  console.log(`\n*** ${terminalConfig.console.title} ***\n`);
+if (terminalConfig.console && terminalConfig.console.title) {
+  console.log(`\n*** ${terminalConfig.console?.title} ***\n`);
 } else {
   console.log("\n*** Untitled Terminal ***\n");
 }
