@@ -22,11 +22,11 @@ Tweak the terminal.json file however you’d like. This defines your terminal’
 Terminal Builder supports 3 output modes:
 Before doing window and web app build commands, do `npm run trmbuild:ui`
 
-|Mode	|Description	Build Command|
-|------------------------------------|
-|window|Desktop terminal UI (Electron)|`npm run trmbuild:window`|
-|web|Web browser terminal (HTML/CSS/JS)|`npm run trmbuild:web`|
-|console|Plain terminal interface (node-based)|`npm run trmbuild:console`|
+| Mode    | Description                                 | Build Command              |
+|---------|---------------------------------------------|----------------------------|
+| window  | Desktop terminal UI (Electron)              | `npm run trmbuild:window`  |
+| web     | Web browser terminal (HTML/CSS/JS)          | `npm run trmbuild:web`     |
+| console | Plain terminal interface (node-based)       | `npm run trmbuild:console` |
 
 # terminal.json Structure (Simplified)
 Here's a basic structure for your config:
