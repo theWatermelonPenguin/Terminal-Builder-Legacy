@@ -50,11 +50,11 @@ if (!fs.existsSync(WebDir)) {
 
 if (mode === 'web') {
   // Write to terminal_ui.html for web mode
-  const outputFile = path.join(WebDir, 'terminal_ui.html');
+  const outputFile = path.join(WebDir, 'terminal.html');
   fs.writeFileSync(outputFile, html, 'utf-8');
   console.log(`HTML written to ${outputFile}`);
 } else {
-    const outputFile = path.join(DesktopDir, 'terminal_ui.html');
+    const outputFile = path.join(DesktopDir, 'terminal.html');
     fs.writeFileSync(outputFile, html, 'utf-8');
     console.log(`HTML written to ${outputFile}`);
 }

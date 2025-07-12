@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## [0.5.3] - 2025-07-12
+### Fixed
+- Patched a bug in the `writeUI.js` file. Now writes a `terminal.html` file instead of `terminal_ui.html`
+---
+
 ## [0.5.2] - 2025-01-11
 ### Fixed
 - Patched a bug in the Electron (`window`) output mode by re-adding the `window.js` component.

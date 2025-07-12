@@ -1,7 +1,7 @@
 {
-  "web": {
+  "window": {
     "title": "The system",
-    "theme": "blue"
+    "theme": "green"
   },
   "input": {
     "prefix": "$",
@@ -20,6 +20,10 @@
     {
       "prompt": "whereami",
       "response": "you are here"
+    },
+    {
+      "prompt": "what is this",
+      "response": "this is terminal builder"
     }
   ]
 }
