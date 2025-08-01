@@ -1,4 +1,4 @@
-# **TERMINAL BUILDER IS ON A SHORT PAUSE! TERMINAL BUILDER WILL COME BACK ON JULY 31, 2025**
+# **Note: Terminal Builder version 1.0.0 and above will be maintained in a new repository soon. Please check there for the latest updates.**
 # Terminal Builder
 An NPM tool used to build terminals in json using "Components".
 
