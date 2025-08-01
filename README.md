@@ -1,4 +1,4 @@
-# **Note: Terminal Builder version 1.0.0 and above will be maintained in a new repository soon. Please check there for the latest updates.**
+# **Note: Terminal Builder version 1.0.0 and above will be maintained in a new repository To get to the new repository, click [here](https://github.com/theWatermelonPenguin/Terminal-Builder)**
 # Terminal Builder
 An NPM tool used to build terminals in json using "Components".
 
